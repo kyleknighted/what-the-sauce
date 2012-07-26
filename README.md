@@ -7,10 +7,14 @@ Demo app running at [whatthesauce.meteor.com](http://whatthesauce.meteor.com)
 ## How to Run Locally
 
 ### Install Meteor
-`$ curl https://install.meteor.com | /bin/sh`
+````
+$ curl https://install.meteor.com | /bin/sh
+````
 
 ### Change Directory
-`$ cd /path/to/what-the-sauce`
+````
+$ cd /path/to/what-the-sauce
+````
 
 ### Run It
 ````
