@@ -1,12 +1,19 @@
-html
-  background: url(images/bg-body.png) repeat-x top left
+@import url(http://fonts.googleapis.com/css?family=Muli:300,400);
+
+html,
+body
   padding: 0
   margin: 0
+  height: 100%
+  position: relative
+
+
+html
+  background: url(images/bg-body.png) repeat top left
 
 body
   background: url(images/bg-top.png) repeat-x top left
-  margin: 0
-  padding: 0
+  padding-bottom: 250px
 
 #wrapper
   padding: 15px
@@ -15,9 +22,10 @@ body
     font-size: 24px
     text-align: center
     text-transform: uppercase
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
-    font-weight: normal
+    font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif
+    font-weight: 400
     padding: 50px 0
+    letter-spacing: 15px
 
     a
       color: #de283d
@@ -75,8 +83,7 @@ body
       padding:5px
       display:none
 
-#edit-image
-  clear: both
+#edit-image-area
 
   label
     display: block
@@ -86,7 +93,23 @@ body
   input
     width: 300px
 
+footer
+  background-color: #2b2b2b
+  padding: 50px 0
+  position: absolute
+  bottom: 0
+  width: 100%
 
+  .copyright
+    font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif
+    font-weight: 300
+    font-size: 11px
+    float: right
+    margin: 0 25px
+    color: #fff
+
+    a
+      color: #fff
 
 
 

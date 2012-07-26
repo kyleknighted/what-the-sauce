@@ -8,6 +8,11 @@
     <hr>
     {{> imageView}}
   </div>
+  <footer>
+    <p class="copyright">
+      Design by: <a href="http://twitter.com/jescalan">@jescalan</a> // Development by: <a href="http://twitter.com/idpro">@idPro</a> // GIF Curation by: <a href="http://twitter.com/excid3">@excid3</a>
+    </p>
+  </footer>
 </body>
 
 <template name="imageList">
@@ -42,7 +47,7 @@
 <template name="imageView">
   {{#if selectedImage}}
   {{#with selectedImage}}
-    <div id="edit-image">
+    <div id="edit-image-area">
       <p>
         <label for="new-image-url">Image URL</label>
         <input value="{{ url }}" type="text" id="edit-image-url" placeholder="Image URL" />
