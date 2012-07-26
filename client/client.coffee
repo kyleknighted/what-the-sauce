@@ -23,7 +23,9 @@ Template.imageList.images = ->
 Template.imageList.events =
   'click #new-image': (e) ->
     url = $('#new-image-url').val()
+    $('#new-image-url').val('')
     name = $('#new-image-name').val()
+    $('#new-image-name').val('')
     if name
       Images.insert(
         url: url
