@@ -47,17 +47,19 @@ Template.imageView.selectedImage = ->
 
 Template.imageView.events =
   'keyup #edit-image-url': (e) ->
-    # @_id should work here, but it doesn't
-    sel = _id: Session.get("image_id")
-    mod = $set: url: $('#edit-image-url').val()
-    Images.update(sel, mod)
+    data = $set: url: $('#edit-image-url').val()
+    Images.update(@_id, data)
 
 Template.imageView.events =
   'keyup #edit-image-name': (e) ->
-    # @_id should work here, but it doesn't
-    sel = _id: Session.get("image_id")
-    mod = $set: name: $('#edit-image-name').val()
-    Images.update(sel, mod)
+    data = $set: name: $('#edit-image-name').val()
+    Images.update(@_id, data)
+
+
+
+############################################
+## Client JavaScript Stuffs
+############################################
 
 $ ->
   image = ''
