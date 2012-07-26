@@ -1,0 +1,121 @@
+html
+  background: url(images/bg-body.png) repeat-x top left
+  padding: 0
+  margin: 0
+
+body
+  background: url(images/bg-top.png) repeat-x top left
+  margin: 0
+  padding: 0
+
+#wrapper
+  padding: 15px
+
+  h1
+    font-size: 24px
+    text-align: center
+    text-transform: uppercase
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+    font-weight: normal
+    padding: 50px 0
+
+    a
+      color: #de283d
+      text-decoration: none
+
+#image-list
+  margin: 0 auto
+  padding: 0 0 50px
+  width: 90%
+
+  .image
+    width: 200px
+    height: 240px
+    margin: 0 0 75px
+    position: relative
+    list-style: none
+    float: left
+    margin: 10px
+    position: relative
+
+    .copy-image-url
+      display: block
+
+      #image-wrap
+        width: 200px
+        height: 200px
+        overflow: hidden
+        border: 1px solid #111
+        border-radius: 5px
+        background-size: cover
+
+        &.selected
+          box-shadow: 0 0 25px rgba(255, 0, 0, 0.5)
+
+    #image-wrap-sauce
+      width: 200px
+      height: 200px
+      outline: none
+
+    p
+      position: absolute
+      top: 200px
+
+      span
+        display: block
+        font-size: 14px
+        height: 14px
+        overflow: hidden
+
+    #toppathwrap
+      position: fixed
+      top: 0px
+      right:0px
+      background-color:#F2F1E8
+      padding:5px
+      display:none
+
+#edit-image
+  clear: both
+
+  label
+    display: block
+    float: left
+    width: 150px
+
+  input
+    width: 300px
+
+
+
+
+
+
+
+
+
+.cf
+  /**
+   * For IE 6/7 only
+   * Include this rule to trigger hasLayout and contain floats.
+  **/
+  *zoom: 1
+
+  &:before,
+  &:after
+    content: " " /* 1 */
+    display: table /* 2 */
+
+  &:after
+    clear: both
+
+
+.cf:before,
+.cf:after {
+    content: " " /* 1 */
+    display: table /* 2 */
+}
+
+.cf:after {
+    clear: both
+}

@@ -1,0 +1,57 @@
+<head>
+  <title>What the Sauce</title>
+  <script type="text/javascripts" src="application.coffee.js"></script>
+</head>
+<body>
+  <div id="wrapper">
+    {{> imageList}}
+    <hr>
+    {{> imageView}}
+  </div>
+</body>
+
+<template name="imageList">
+  <h1><a href="/">What the Sauce</a></h1>
+  <ul id="image-list" class="cf">
+    {{#each images}}
+      {{> image}}
+    {{/each}}
+  </ul>
+  <div id="createImage">
+    <label for="new-image-name">New Image:</label>
+    <input type="text" id="new-image-url" placeholder="Image URL" />
+    <input type="text" id="new-image-name" placeholder="Image Description" />
+    <input type="button" id="new-image" value="create"/>
+  </div>
+</template>
+
+<template name="image">
+  <li class="image">
+    <a href="{{ url }}" target="_blank" class="copy-image-url">
+      <div id="image-wrap" class="{{selected}}" style="background:url({{ url }}) no-repeat center center"></div>
+    </a>
+    <p>
+      <!-- <img src="{{ url }}" alt="{{ name }}" /> -->
+      <a href="{{ url }}" target="_blank"><span>{{ name }}</span></a>
+      <input type="button" id="edit-image" value="Edit"/>
+      <input type="button" id="delete-image" value="Delete"/>
+    </p>
+  </li>
+</template>
+
+<template name="imageView">
+  {{#if selectedImage}}
+  {{#with selectedImage}}
+    <div id="edit-image">
+      <p>
+        <label for="new-image-url">Image URL</label>
+        <input value="{{ url }}" type="text" id="edit-image-url" placeholder="Image URL" />
+      </p>
+      <p>
+        <label for="new-image-name">Image Description</label>
+        <input value="{{ name }}" type="text" id="edit-image-name" placeholder="Image Description" />
+      </p>
+    </div>
+   {{/with}}
+   {{/if}}
+</template>
